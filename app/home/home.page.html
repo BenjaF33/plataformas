@@ -1,0 +1,35 @@
+
+
+<ion-content>
+  <main class="mobile-page">
+    <label class="search-box">
+      <span aria-hidden="true">⌕</span>
+      <input type="search" placeholder="Buscar cancha..." aria-label="Buscar cancha">
+    </label>
+
+    <section class="hero-card" aria-label="Reserva tu cancha">
+      <img src="assets/canchas/cancha1.png" alt="Cancha disponible">
+      <h1>Tu cancha en segundos</h1>
+    </section>
+
+    <nav class="filter-list" aria-label="Filtrar canchas">
+      <button type="button" class="filter-button"><span>▣</span>F5</button>
+      <button type="button" class="filter-button"><span>▣</span>F7</button>
+      <button type="button" class="filter-button"><span>▣</span>F8</button>
+      <button type="button" class="filter-button"><span>▣</span>F11</button>
+    </nav>
+
+    <section class="court-list" aria-label="Canchas disponibles">
+      @for (c of canchas; track c.nombre) {
+        <article class="court-card">
+          <img class="court-image" [src]="c.imagen" [alt]="c.nombre">
+          <div class="court-info">
+            <h2>{{ c.nombre }}</h2>
+            <p class="court-location"><span aria-hidden="true">●</span> Cipolletti</p>
+            <ion-button class="court-button" expand="block">Reservar</ion-button>
+          </div>
+        </article>
+      }
+    </section>
+  </main>
+</ion-content>

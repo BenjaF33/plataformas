@@ -1,0 +1,209 @@
+:host {
+	--green: #284337;
+	--green-dark: #193329;
+	--light: #d9d9d9;
+	--accent: #c9f36b;
+	display: block;
+	min-height: 100%;
+	background: var(--green);
+	color: #101814;
+}
+
+.topbar ion-toolbar {
+	--background: var(--green);
+	--color: #fff;
+	--min-height: 64px;
+	padding: 4px 16px 0;
+}
+
+.topbar ion-title {
+	font: 1rem/1.05 'Trebuchet MS', sans-serif;
+	letter-spacing: 0;
+}
+
+ion-content {
+	--background: var(--green);
+}
+
+.mobile-page {
+	padding: 0 16px 86px;
+}
+
+.search-box {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	height: 37px;
+	padding: 0 12px;
+	border-radius: 7px;
+	background: var(--light);
+	color: #222;
+}
+
+.search-box span {
+	font-size: 1.55rem;
+	line-height: 1;
+}
+
+.search-box input {
+	width: 100%;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	color: #111;
+	font: 0.95rem 'Trebuchet MS', sans-serif;
+}
+
+.search-box input::placeholder {
+	color: #202020;
+	opacity: 1;
+}
+
+.hero-card {
+	position: relative;
+	overflow: hidden;
+	height: 147px;
+	margin-top: 17px;
+	border-radius: 9px;
+	background: #385c3c;
+}
+
+.hero-card::after {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(0deg, rgba(17, 42, 26, 0.75), transparent 62%);
+	content: '';
+}
+
+.hero-card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.hero-card h1 {
+	position: absolute;
+	bottom: 13px;
+	left: 13px;
+	z-index: 1;
+	margin: 0;
+	color: #fff;
+	font: 1.35rem 'Trebuchet MS', sans-serif;
+}
+
+.filter-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	margin: 17px 7px 30px;
+}
+
+.filter-button {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 62px;
+	padding: 4px;
+	border: 0;
+	border-radius: 7px;
+	background: var(--light);
+	color: #111;
+	font: 1.25rem/1 'Trebuchet MS', sans-serif;
+}
+
+.filter-button span {
+	font-size: 1.25rem;
+	line-height: 1;
+}
+
+.court-list {
+	display: grid;
+	gap: 16px;
+}
+
+.court-card {
+	display: grid;
+	grid-template-columns: 102px 1fr;
+	gap: 16px;
+	min-height: 109px;
+	padding: 10px;
+	border-radius: 8px;
+	background: var(--light);
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.court-image {
+	width: 102px;
+	height: 88px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.court-info {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+
+.court-info h2 {
+	margin: 2px 0 2px;
+	color: #080c09;
+	font: 700 0.9rem 'Trebuchet MS', sans-serif;
+}
+
+.court-location {
+	margin: 0;
+	color: #111;
+	font: 0.65rem 'Trebuchet MS', sans-serif;
+}
+
+.court-location span {
+	color: #167321;
+	font-size: 0.55rem;
+}
+
+.court-button {
+	--background: #176126;
+	--background-hover: #124d1e;
+	--color: #fff;
+	--border-radius: 7px;
+	align-self: stretch;
+	margin: auto 0 0;
+	min-height: 24px;
+	font-size: 0.95rem;
+	font-weight: 500;
+}
+
+.bottom-nav {
+	position: fixed;
+	right: 8px;
+	bottom: 0;
+	left: 8px;
+	z-index: 5;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	height: 48px;
+	border-radius: 8px 8px 0 0;
+	background: #d9d9d9;
+	box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.bottom-nav button {
+	border: 0;
+	background: transparent;
+	color: #111;
+	font-size: 1.4rem;
+}
+
+.bottom-nav button.active {
+	color: #176126;
+}
+
+@media (min-width: 641px) {
+	:host {
+		width: 375px;
+		min-height: 100vh;
+		margin: 0 auto;
+	}
+}
