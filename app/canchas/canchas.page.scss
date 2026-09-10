@@ -1,0 +1,82 @@
+:host {
+	--green: #284337;
+	--green-dark: #193329;
+	display: block;
+	min-height: 100%;
+	background: var(--green);
+	color: #101814;
+}
+
+ion-header ion-toolbar {
+	--background: var(--green);
+	--color: #fff;
+}
+
+ion-content {
+	--background: var(--green);
+}
+
+.page-content {
+	padding: 24px 16px 40px;
+}
+
+.court-card {
+	overflow: hidden;
+	border-radius: 9px;
+	background: #d9d9d9;
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.court-image {
+	display: block;
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+}
+
+.court-details {
+	padding: 22px 18px 20px;
+}
+
+.court-details h1 {
+	margin: 0 0 10px;
+	color: #080c09;
+	font: 700 1.45rem 'Trebuchet MS', sans-serif;
+}
+
+.court-location {
+	margin: 0 0 18px;
+	color: #193329;
+	font: 0.95rem 'Trebuchet MS', sans-serif;
+}
+
+.court-price {
+	margin: 0 0 22px;
+	color: #176126;
+	font: 700 1.25rem 'Trebuchet MS', sans-serif;
+}
+
+.court-price span {
+	color: #101814;
+	font-size: 0.85rem;
+	font-weight: 400;
+}
+
+.reserve-button {
+	--background: #176126;
+	--background-hover: #124d1e;
+	--color: #fff;
+	--border-radius: 7px;
+	min-height: 52px;
+	margin: 0;
+	font-size: 1.05rem;
+	font-weight: 700;
+}
+
+@media (min-width: 641px) {
+	:host {
+		width: 375px;
+		min-height: 100vh;
+		margin: 0 auto;
+	}
+}

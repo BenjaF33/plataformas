@@ -10,4 +10,17 @@
       <ion-title size="large">canchas</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <main class="page-content">
+    <article class="court-card">
+      <img class="court-image" [src]="canchas.imagen" [alt]="canchas.nombre">
+
+      <div class="court-details">
+        <h1>{{ canchas.nombre }}</h1>
+        <p class="court-location">{{ canchas.ubicacion }}</p>
+        <p class="court-price">${{ canchas.precio }} <span>/ hora</span></p>
+        <ion-button class="reserve-button" expand="block">Reservar</ion-button>
+      </div>
+    </article>
+  </main>
 </ion-content>

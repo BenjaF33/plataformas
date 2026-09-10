@@ -10,4 +10,8 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'canchas',
+    loadComponent: () => import('../../app/canchas/canchas.page').then((m) => m.CanchasPage),
+  },
 ];
