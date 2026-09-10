@@ -4,7 +4,13 @@
   <main class="mobile-page">
     <label class="search-box">
       <span aria-hidden="true">⌕</span>
-      <input type="search" placeholder="Buscar cancha..." aria-label="Buscar cancha">
+      <input
+        type="search"
+        [value]="searchTerm"
+        (input)="onSearch($event)"
+        placeholder="Buscar cancha..."
+        aria-label="Buscar cancha"
+      >
     </label>
 
     <section class="hero-card" aria-label="Reserva tu cancha">
@@ -13,20 +19,28 @@
     </section>
 
     <nav class="filter-list" aria-label="Filtrar canchas">
-      <button type="button" class="filter-button"><span>▣</span>F5</button>
-      <button type="button" class="filter-button"><span>▣</span>F7</button>
-      <button type="button" class="filter-button"><span>▣</span>F8</button>
-      <button type="button" class="filter-button"><span>▣</span>F11</button>
+      @for (filter of filtros; track filter) {
+        <button
+          type="button"
+          class="filter-button"
+          [class.is-active]="activeFilter === filter"
+          (click)="setFilter(filter)"
+        >
+          <span>▣</span>{{ filter }}
+        </button>
+      }
     </nav>
 
     <section class="court-list" aria-label="Canchas disponibles">
-      @for (c of canchas; track c.nombre) {
+      @for (c of filteredCanchas; track c.nombre) {
         <article class="court-card">
           <img class="court-image" [src]="c.imagen" [alt]="c.nombre">
           <div class="court-info">
             <h2>{{ c.nombre }}</h2>
-            <p class="court-location"><span aria-hidden="true">●</span> Cipolletti</p>
-            <ion-button class="court-button" expand="block">Reservar</ion-button>
+            <p class="court-location"><span aria-hidden="true">●</span> {{ c.ubicacion }}</p>
+            <ion-button class="court-button" expand="block" (click)="reservarCancha(c)">
+              Reservar
+            </ion-button>
           </div>
         </article>
       }
