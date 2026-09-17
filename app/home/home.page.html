@@ -26,7 +26,7 @@
           <div class="court-info">
             <h2>{{ c.nombre }}</h2>
             <p class="court-location"><span aria-hidden="true">●</span> Cipolletti</p>
-            <ion-button class="court-button" expand="block">Reservar</ion-button>
+            <ion-button class="court-button" expand="block" (click)="reservar(c)">Reservar</ion-button>
           </div>
         </article>
       }

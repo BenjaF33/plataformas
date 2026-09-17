@@ -12,7 +12,7 @@
   </ion-header>
 
   <main class="page-content">
-    <article class="court-card">
+    <article class="court-section">
       <img class="court-image" [src]="canchas.imagen" [alt]="canchas.nombre">
 
       <div class="court-details">
@@ -22,5 +22,25 @@
         <ion-button class="reserve-button" expand="block">Reservar</ion-button>
       </div>
     </article>
+
+    <section class="reviews-section" aria-labelledby="reviews-title">
+      <div class="reviews-heading">
+        <h2 id="reviews-title">Reseñas</h2>
+        <span class="reviews-summary">4.8 de 5</span>
+      </div>
+
+      <div class="reviews-list">
+        <article class="review-card" *ngFor="let review of reviews">
+          <img class="review-avatar" [src]="review.imagen" [alt]="'Foto de ' + review.nombre">
+          <div class="review-content">
+            <div class="review-topline">
+              <h3>{{ review.nombre }}</h3>
+              <span class="review-stars" [attr.aria-label]="review.estrellas + ' estrellas'">{{ review.estrellasVisuales }}</span>
+            </div>
+            <p>{{ review.comentario }}</p>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 </ion-content>

@@ -15,4 +15,13 @@ describe('HomePage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should reserve a court and keep the last reservation', () => {
+    const alertSpy = spyOn(window, 'alert');
+
+    component.reservarCancha(component.canchas[0]);
+
+    expect(component.ultimaReserva).toBe('Cancha 1');
+    expect(alertSpy).toHaveBeenCalledWith('Reservaste Cancha 1 (F5) en Cipolletti.');
+  });
 });

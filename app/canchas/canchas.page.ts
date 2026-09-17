@@ -14,11 +14,34 @@ export class CanchasPage implements OnInit {
   constructor() { 
    
   }
-   canchas ={ nombre: 'Cancha 1', imagen: 'assets/canchas/cancha1.png', descripcion: 'Cancha de fútbol con césped natural.', ubicacion:"cipolletti brasil 746", precio:4000 }
+  canchas = { nombre: 'Cancha 1', imagen: 'assets/canchas/cancha1.png', descripcion: 'Cancha de fútbol con césped natural.', ubicacion: 'cipolletti brasil 746', precio: 4000 };
+
+  reviews = [
+    {
+      nombre: 'Matias Gonzalez',
+      imagen: 'assets/canchas/cancha2.png',
+      estrellas: 5,
+      estrellasVisuales: '★★★★★',
+      comentario: 'La cancha está impecable y el proceso de reserva fue muy rápido.',
+    },
+    {
+      nombre: 'Sofia Martinez',
+      imagen: 'assets/canchas/cancha3.png',
+      estrellas: 5,
+      estrellasVisuales: '★★★★★',
+      comentario: 'Muy buen espacio para jugar con amigos. Volveremos la próxima semana.',
+    },
+    {
+      nombre: 'Lucas Fernandez',
+      imagen: 'assets/canchas/cancha4.png',
+      estrellas: 4,
+      estrellasVisuales: '★★★★☆',
+      comentario: 'Buena ubicación, atención amable y una cancha en muy buenas condiciones.',
+    },
+  ];
    
 
-  ngOnInit() {
-    
+
   }
 
 }

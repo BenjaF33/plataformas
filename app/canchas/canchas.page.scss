@@ -3,7 +3,7 @@
 	--green-dark: #193329;
 	display: block;
 	min-height: 100%;
-	background: var(--green);
+	background: #d3d5d4;
 	color: #101814;
 }
 
@@ -13,29 +13,31 @@ ion-header ion-toolbar {
 }
 
 ion-content {
-	--background: var(--green);
+	--background: #d3d5d4;
 }
 
 .page-content {
-	padding: 24px 16px 40px;
+	width: 100%;
+	max-width: 375px;
+	margin: 0 auto;
+	padding: 24px 16px 86px;
 }
 
-.court-card {
+.court-section {
 	overflow: hidden;
-	border-radius: 9px;
-	background: #d9d9d9;
-	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+	background: transparent;
 }
 
 .court-image {
 	display: block;
 	width: 100%;
-	height: 260px;
+	height: 160px;
 	object-fit: cover;
+	border-radius: 8px;
 }
 
 .court-details {
-	padding: 22px 18px 20px;
+	padding: 22px 0 28px;
 }
 
 .court-details h1 {
@@ -71,6 +73,84 @@ ion-content {
 	margin: 0;
 	font-size: 1.05rem;
 	font-weight: 700;
+}
+
+.reviews-section {
+	padding-top: 8px;
+}
+
+.reviews-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 16px;
+}
+
+.reviews-heading h2 {
+	margin: 0;
+	color: #101814;
+	font: 700 1.35rem 'Trebuchet MS', sans-serif;
+}
+
+.reviews-summary {
+	color: #176126;
+	font: 700 0.95rem 'Trebuchet MS', sans-serif;
+}
+
+.reviews-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 14px;
+}
+
+.review-card {
+	display: flex;
+	align-items: flex-start;
+	gap: 13px;
+	min-height: 132px;
+	padding: 17px;
+	border-radius: 8px;
+	background: #557b5e;
+	color: #fff;
+}
+
+.review-avatar {
+	flex: 0 0 48px;
+	width: 48px;
+	height: 48px;
+	border: 2px solid #dce9d9;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.review-content {
+	min-width: 0;
+}
+
+.review-topline {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.review-topline h3 {
+	margin: 0;
+	font: 700 1rem 'Trebuchet MS', sans-serif;
+}
+
+.review-stars {
+	flex-shrink: 0;
+	color: #f4d35e;
+	font-size: 0.9rem;
+	letter-spacing: 0;
+}
+
+.review-content p {
+	margin: 10px 0 0;
+	color: #eef5ed;
+	font: 0.92rem/1.45 'Trebuchet MS', sans-serif;
 }
 
 @media (min-width: 641px) {
